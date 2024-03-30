@@ -11,27 +11,33 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    console.log('You Win! Rock beats Scissors');
+    return 'You Win! Rock beats Scissors';
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-    console.log('You Lose! Paper beats Rock');
+    return 'You Lose! Paper beats Rock';
   } else if (playerSelection === 'rock' && computerSelection === 'rock') {
-    console.log('Draw! You both picked Rock');
+    return 'Draw! You both picked Rock';
   } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    console.log('You Win! Paper beats Rock');
+    return 'You Win! Paper beats Rock';
   } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-    console.log('Draw! You both picked Paper');
+    return 'Draw! You both picked Paper';
   } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    console.log('You Lose! Scissors beats Paper');
+    return 'You Lose! Scissors beats Paper';
   } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-    console.log('You Lose! Rock beats Scissors');
+    return 'You Lose! Rock beats Scissors';
   } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-    console.log('You Win! Scissors beats Paper');
+    return 'You Win! Scissors beats Paper';
   } else if (
     playerSelection === 'scissors' &&
     computerSelection === 'scissors'
   ) {
-    console.log('Draw! You both picked Scissors');
+    return 'Draw! You both picked Scissors';
   }
+}
+
+function playGame() {
+  let game = 5;
+  let scoreA;
+  let scoreB;
 }
 
 const playerSelection = prompt(
@@ -39,5 +45,5 @@ const playerSelection = prompt(
 ).toLowerCase();
 const computerSelection = getComputerChoice();
 
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+// console.log(computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
