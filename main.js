@@ -34,20 +34,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// function playGame() {
-//   let game = 5;
-//   let scoreA;
-//   let scoreB;
-//   playRound(playerSelection, computerSelection);
-//   if (playRound(playerSelection, computerSelection) === NaN) {
-//     scoreA++;
-//   } else if (playRound(playerSelection, computerSelection) === NaN) {
-//     scoreB++;
-//   }
-//   console.log(scoreA);
-//   console.log(scoreB);
-// }
-
 function playGame() {
   let scoreA = 0;
   let scoreB = 0;
@@ -69,10 +55,17 @@ function playGame() {
         break;
     }
     console.log(result);
-    console.log(playerSelection);
-    console.log(computerSelection);
-    console.log(scoreA);
-    console.log(scoreB);
+    // console.log(playerSelection);
+    // console.log(computerSelection);
+    // console.log(scoreA);
+    // console.log(scoreB);
+  }
+  if (scoreA > scoreB) {
+    console.log('You Won The Game!');
+  } else if (scoreA === scoreB) {
+    console.log('Draw Try Again!');
+  } else {
+    console.log('You Lose Try Again!');
   }
 }
 
