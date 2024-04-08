@@ -81,6 +81,6 @@ function playRound(playerSelection, computerSelection) {
 //     console.log('You Lose Try Again!');
 //   }
 // }
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playerSelection);
+// console.log(computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
