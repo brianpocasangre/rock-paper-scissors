@@ -1,22 +1,31 @@
 const rockBtn = document.querySelector('.rock');
 const paperBtn = document.querySelector('.paper');
 const scissorsBtn = document.querySelector('.scissors');
-const results = document.querySelector('.results');
+const result = document.querySelector('.result');
 
 rockBtn.addEventListener('click', () => {
   let playerSelection = 'rock';
-  console.log(computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
+  let results = playRound(
+    playerSelection,
+    (computerSelection = getComputerChoice())
+  );
+  result.innerHTML = results + ` Computer chose ${computerSelection}`;
 });
 paperBtn.addEventListener('click', () => {
   let playerSelection = 'paper';
-  console.log(computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
+  let results = playRound(
+    playerSelection,
+    (computerSelection = getComputerChoice())
+  );
+  result.innerHTML = results + ` Computer chose ${computerSelection}`;
 });
 scissorsBtn.addEventListener('click', () => {
   let playerSelection = 'scissors';
-  console.log(computerSelection);
-  console.log(playRound(playerSelection, computerSelection));
+  let results = playRound(
+    playerSelection,
+    (computerSelection = getComputerChoice())
+  );
+  result.innerHTML = results + ` Computer chose ${computerSelection}`;
 });
 
 function getComputerChoice() {
@@ -29,7 +38,7 @@ function getComputerChoice() {
     return 'scissors';
   }
 }
-let computerSelection = getComputerChoice();
+// let computerSelection = getComputerChoice();
 // let playerSelection = prompt(
 //   'What is your choice; Rock, Paper, Scissors?'
 // ).toLowerCase();
