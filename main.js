@@ -3,9 +3,21 @@ const paperBtn = document.querySelector('.paper');
 const scissorsBtn = document.querySelector('.scissors');
 const results = document.querySelector('.results');
 
-rockBtn.addEventListener('click', () => console.log('clicked rock'));
-paperBtn.addEventListener('click', () => console.log('clicked paper'));
-scissorsBtn.addEventListener('click', () => console.log('clicked scissors'));
+rockBtn.addEventListener('click', () => {
+  let playerSelection = 'rock';
+  console.log(computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+});
+paperBtn.addEventListener('click', () => {
+  let playerSelection = 'paper';
+  console.log(computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+});
+scissorsBtn.addEventListener('click', () => {
+  let playerSelection = 'scissors';
+  console.log(computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
+});
 
 function getComputerChoice() {
   num = Math.floor(Math.random() * 4);
@@ -18,9 +30,9 @@ function getComputerChoice() {
   }
 }
 let computerSelection = getComputerChoice();
-let playerSelection = prompt(
-  'What is your choice; Rock, Paper, Scissors?'
-).toLowerCase();
+// let playerSelection = prompt(
+//   'What is your choice; Rock, Paper, Scissors?'
+// ).toLowerCase();
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === 'rock' && computerSelection === 'scissors') {
